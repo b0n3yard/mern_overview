@@ -3,10 +3,8 @@ import { useEffect, useState } from 'react'
 import { Route,Routes } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import viteLogo from '/vite.svg'
-import Header from './components/Header'
-import Landing from './pages/Landing'
-import Auth from './pages/Auth'
-import NotFound from './pages/NotFound'
+import Components from './components/index'
+import {Landing,Auth,NotFound} from './pages/index'
 
 
 function App() {
@@ -45,7 +43,7 @@ function App() {
   return (
     <>
     
-    <Header setuser={setuser} user={user}/>
+    <Components.Header setuser={setuser} user={user}/>
       
       <Container>
         <Routes>
